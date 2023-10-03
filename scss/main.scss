@@ -1,0 +1,550 @@
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-display_regular.woff2);
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 500;
+  src: url(../fonts/sf-pro-display_medium.woff2);
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  src: url(../fonts/sf-pro-display_semibold.woff2);
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 700;
+  src: url(../fonts/sf-pro-display_bold.woff2);
+}
+@font-face {
+  font-family: "SF Pro Icons";
+  font-weight: 300;
+  src: url(../fonts/sf-pro-icons_light.woff2);
+}
+@font-face {
+  font-family: "SF Pro Icons";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-icons_regular.woff2);
+}
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-text_regular.woff2);
+}
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 600;
+  src: url(../fonts/sf-pro-text_semibold.woff2);
+}
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 700;
+  src: url(../fonts/sf-pro-text_bold.woff2);
+}
+
+$black: #000;
+$white: #fff;
+$header-text-color: rgba(0, 0, 0, 0.8); // #000000cc
+$background100: rgba(0, 0, 0, 0.478); // #0000007a
+$header-bg: rgba(0, 0, 0, 0.039); // #0000000a
+$header-bg-1: rgb(251, 251, 253);
+$menu-bg: rgba(251, 251, 253, 0.8); // #fbfbfdcc
+$text-color: #1d1d1f;
+$submenu-text: #6e6e73;
+$submenu-text-1: #333336;
+$link-color: #0066cc;
+$link-color-1: #2997ff;
+$heading-color: #f5f5f7;
+$footer-border-color: #d2d2d7;
+$footer-color: #424245;
+$font-display: "SF Pro Display";
+$font-text: "SF Pro Text";
+$font-icon: "SF Pro Icons";
+$font-fallback: sans-serif;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+@mixin font-icon($icon-color, $icon-font-size, $icon-content) {
+  font-family: $font-icon;
+  font-size: $icon-font-size;
+  font-weight: $font-regular;
+  color: $icon-color;
+  content: $icon-content;
+}
+
+@mixin link($lineheight, $link-font-size, $column-gap, $letterspacing) {
+  display: flex;
+  column-gap: $column-gap;
+  font-size: $link-font-size;
+  font-weight: $font-regular;
+  line-height: $lineheight;
+  letter-spacing: $letterspacing;
+  margin-top: 0.65em;
+  position: relative;
+  z-index: 10;
+  > a {
+    text-decoration: none;
+    color: $link-color-1;
+    display: flex;
+    align-items: center;
+    &:hover > p {
+      text-decoration: underline;
+    }
+    > span::after {
+      @include font-icon($link-color-1, $link-font-size, "\f301");
+    }
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-text, $font-icon;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input[type="checkbox"] {
+  display: none;
+  &:checked {
+    ~ div.education-ad {
+      height: 0;
+    }
+    ~ div.menu-container div.submenu {
+      top: 44px;
+    }
+  }
+}
+// header
+div.sticky-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  position: sticky;
+  z-index: 999;
+  > div.education-ad {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 17.5%;
+    align-items: center;
+    background-color: $header-bg-1;
+    transform-origin: top;
+    overflow: hidden;
+    > a {
+      text-decoration: none;
+      color: $header-text-color;
+      font-size: 12px;
+      padding: 0 12px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    > span {
+      width: 1px;
+      height: 12px;
+      background-color: $background100;
+    }
+    > label {
+      color: $header-text-color;
+      cursor: pointer;
+      font-size: 12px;
+      padding: 0 12px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  > div.menu-container {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 17.5%;
+    background-color: $menu-bg;
+    backdrop-filter: blur(20px);
+    position: relative;
+    > ul {
+      width: 100%;
+      padding: 0 12px;
+      display: flex;
+      list-style: none;
+      > li {
+        flex-grow: 1;
+        &:hover > div.submenu {
+          height: auto;
+          padding: 1rem 17.5% 3rem 17.5%;
+        }
+        > a {
+          display: block;
+          width: 100%;
+        }
+        > div.submenu {
+          flex-wrap: wrap;
+          display: flex;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          top: 100%;
+          column-gap: 3rem;
+          height: 0;
+          padding: 0 17.5%;
+          background-color: $header-bg-1;
+          > div.s-title {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.25rem;
+            > a {
+              font-size: 24px;
+              padding: 9px 11px;
+              margin: -6px 0;
+              font-weight: $font-semibold;
+            }
+            > div.s-more {
+              display: flex;
+              flex-direction: column;
+              width: max-content;
+              > a {
+                font-size: 12px;
+                padding: 7px 11px;
+                font-weight: $font-semibold;
+                text-decoration: none;
+                color: $submenu-text-1;
+              }
+            }
+          }
+          > div.s-column {
+            display: flex;
+            flex-direction: column;
+            > a {
+              font-size: 12px;
+              padding: 7px 11px;
+              font-weight: $font-semibold;
+              &:hover {
+                color: $black;
+              }
+            }
+          }
+          > div {
+            > h2 {
+              font-size: 12px;
+              padding: 7px 11px;
+              color: $submenu-text;
+              font-weight: $font-regular;
+            }
+            > a {
+              text-decoration: none;
+              color: $submenu-text-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// commercial images
+div.heading-container {
+  width: 100%;
+  min-height: 580px;
+  height: 692px;
+  font-family: $font-display;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0.5rem;
+  > div.heading-txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    color: $heading-color;
+    > h2 {
+      font-size: 56px;
+      font-weight: $font-semibold;
+      line-height: 1.07;
+      letter-spacing: -0.005em;
+    }
+    > h3 {
+      font-weight: $font-regular;
+      font-size: 28px;
+      line-height: 1.1;
+      margin-top: 6px;
+      letter-spacing: 0.004em;
+    }
+    > div.heading-link {
+      @include link(1.38, 21px, 3rem, 0.011em);
+    }
+  }
+  > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+div.heading-img1 {
+  background-image: url(../media/hero_iphone15pro_startframe__eqik3fj8bx4y_large.jpg);
+}
+
+div.heading-img2 {
+  background-image: url(../media/hero_iphone15_announce__uuemlcwczn6u_large.jpg);
+  h2 {
+    color: $text-color;
+  }
+  h3 {
+    color: $text-color;
+  }
+}
+
+div.heading-img3 {
+  background-image: url(../media/hero_apple_watch_series_9_order__d0fi9mb84dci_large.jpg);
+  h2 {
+    background: url(../media/hero_logo_apple_watch_series_9__eg5xcrxghuaa_large.png)
+      center no-repeat;
+    background-size: contain;
+    height: 72px;
+    width: 100%;
+  }
+}
+
+div.body-container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  > div.body-image {
+    position: relative;
+    width: calc(50% - 0.25rem);
+    height: 580px;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    > div.body-txt {
+      display: flex;
+      flex-direction: column;
+      margin: 3rem 0;
+      align-items: center;
+      font-family: $font-display;
+      > h4 {
+        line-height: 1.1;
+        font-weight: $font-semibold;
+        letter-spacing: 0;
+        font-size: 40px;
+      }
+      > h4.body-txt-img {
+        width: 100%;
+        height: 41px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      > h5 {
+        font-size: 21px;
+        line-height: 1.23;
+        letter-spacing: 0.016em;
+        font-weight: $font-regular;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        > span {
+          background: url(../media/promo_m2_chip__enw2kz91lsuq_large.png) center
+            no-repeat;
+          background-size: contain;
+          width: 37px;
+          height: 37px;
+          float: right;
+        }
+        a {
+          font-size: 0.6em;
+          text-decoration: none;
+          color: $text-color;
+          z-index: 10;
+        }
+      }
+      > h5.break-line {
+        max-width: 60%;
+      }
+      > p {
+        font-size: 17px;
+        line-height: 1.23;
+        font-weight: $font-regular;
+        margin-top: 12px;
+        letter-spacing: -0.022em;
+      }
+      > div.body-link {
+        @include link(1.23, 17px, 2rem, -0.022em);
+      }
+    }
+    > div.body-txt-dark {
+      color: $text-color;
+    }
+    > div.body-txt-light {
+      color: $heading-color;
+    }
+    > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  h4.bti1 {
+    background-image: url(../media/promo_logo_apple_vision_pro__90zi46p7dc2y_large.png);
+  }
+  h4.bti2 {
+    background-image: url(../media/logo_tradein__d1fpktgipvki_large.png);
+  }
+  h4.bti3 {
+    background-image: url(../media/logo__dcojfwkzna2q_large.png);
+  }
+  > div.body-bottom {
+    align-items: flex-end;
+  }
+  > div.body-image1 {
+    background-image: url(../media/promo_ipadpro_refresh__evi9utuixwuq_large.jpg);
+  }
+  > div.body-image2 {
+    background-image: url(../media/promo_apple_vision_pro__f4v4zp0sum2y_large.jpg);
+  }
+  > div.body-image3 {
+    background-image: url(../media/promo_macbook_air_15_midnight__3zojl1nanrme_large.jpg);
+  }
+  > div.body-image4 {
+    background-image: url(../media/promo_airpods_pro_order__d8xv36p4uwae_large.jpg);
+  }
+  > div.body-image5 {
+    background-image: url(../media/promo_iphone_tradein__bugw15ka691e_large.jpg);
+  }
+  > div.body-image6 {
+    background-image: url(../media/tile__cauwwcyyn9hy_large.jpg);
+  }
+}
+
+// footer
+div.footer {
+  width: 100%;
+  color: $submenu-text;
+  background-color: $heading-color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem calc(17.5% + 12px);
+  > div.f-txt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    row-gap: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid $footer-border-color;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.01;
+    font-weight: $font-regular;
+    a {
+      color: $submenu-text;
+      text-decoration: underline;
+    }
+  }
+  > div.f-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    row-gap: 2rem;
+    border-bottom: 1px solid $footer-border-color;
+    font-weight: $font-regular;
+    font-size: 12px;
+    > div.f-column {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      > div.f-btn {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        > p {
+          color: $submenu-text;
+          font-weight: $font-semibold;
+        }
+        > a {
+          display: flex;
+          width: max-content;
+          text-decoration: none;
+          color: $footer-color;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    > p > a {
+      text-decoration: underline;
+      color: $link-color;
+    }
+  }
+  div.f-copyright {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    padding-bottom: 3rem;
+    > p {
+      color: $submenu-text;
+      font-size: 12px;
+      margin-right: 2rem;
+    }
+    > ul {
+      flex-grow: 1;
+      display: flex;
+      list-style: none;
+      > li {
+        padding-right: 0.6rem;
+        margin-right: 0.6rem;
+        border-right: 1px solid $footer-color;
+        font-size: 12px;
+        &:nth-last-child(1) {
+          padding: 0;
+          margin: 0;
+          border: none;
+        }
+        > a {
+          text-decoration: none;
+          color: $footer-color;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    > a {
+      font-size: 12px;
+      color: $footer-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

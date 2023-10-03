@@ -1,0 +1,439 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-display_regular.woff2); }
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 500;
+  src: url(../fonts/sf-pro-display_medium.woff2); }
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  src: url(../fonts/sf-pro-display_semibold.woff2); }
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 700;
+  src: url(../fonts/sf-pro-display_bold.woff2); }
+@font-face {
+  font-family: "SF Pro Icons";
+  font-weight: 300;
+  src: url(../fonts/sf-pro-icons_light.woff2); }
+@font-face {
+  font-family: "SF Pro Icons";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-icons_regular.woff2); }
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  src: url(../fonts/sf-pro-text_regular.woff2); }
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 600;
+  src: url(../fonts/sf-pro-text_semibold.woff2); }
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 700;
+  src: url(../fonts/sf-pro-text_bold.woff2); }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "SF Pro Text", "SF Pro Icons";
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+
+input[type="checkbox"] {
+  display: none; }
+  input[type="checkbox"]:checked ~ div.education-ad {
+    height: 0; }
+  input[type="checkbox"]:checked ~ div.menu-container div.submenu {
+    top: 44px; }
+
+div.sticky-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  position: sticky;
+  z-index: 999; }
+  div.sticky-top > div.education-ad {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 17.5%;
+    align-items: center;
+    background-color: #fbfbfd;
+    transform-origin: top;
+    overflow: hidden; }
+    div.sticky-top > div.education-ad > a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 12px;
+      padding: 0 12px; }
+      div.sticky-top > div.education-ad > a:hover {
+        text-decoration: underline; }
+    div.sticky-top > div.education-ad > span {
+      width: 1px;
+      height: 12px;
+      background-color: rgba(0, 0, 0, 0.478); }
+    div.sticky-top > div.education-ad > label {
+      color: rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      font-size: 12px;
+      padding: 0 12px; }
+      div.sticky-top > div.education-ad > label:hover {
+        text-decoration: underline; }
+  div.sticky-top > div.menu-container {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 17.5%;
+    background-color: rgba(251, 251, 253, 0.8);
+    backdrop-filter: blur(20px);
+    position: relative; }
+    div.sticky-top > div.menu-container > ul {
+      width: 100%;
+      padding: 0 12px;
+      display: flex;
+      list-style: none; }
+      div.sticky-top > div.menu-container > ul > li {
+        flex-grow: 1; }
+        div.sticky-top > div.menu-container > ul > li:hover > div.submenu {
+          height: auto;
+          padding: 1rem 17.5% 3rem 17.5%; }
+        div.sticky-top > div.menu-container > ul > li > a {
+          display: block;
+          width: 100%; }
+        div.sticky-top > div.menu-container > ul > li > div.submenu {
+          flex-wrap: wrap;
+          display: flex;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          top: 100%;
+          column-gap: 3rem;
+          height: 0;
+          padding: 0 17.5%;
+          background-color: #fbfbfd; }
+          div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.25rem; }
+            div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title > a {
+              font-size: 24px;
+              padding: 9px 11px;
+              margin: -6px 0;
+              font-weight: 600; }
+            div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title > div.s-more {
+              display: flex;
+              flex-direction: column;
+              width: max-content; }
+              div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title > div.s-more > a {
+                font-size: 12px;
+                padding: 7px 11px;
+                font-weight: 600;
+                text-decoration: none;
+                color: #333336; }
+          div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-column {
+            display: flex;
+            flex-direction: column; }
+            div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-column > a {
+              font-size: 12px;
+              padding: 7px 11px;
+              font-weight: 600; }
+              div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-column > a:hover {
+                color: #000; }
+          div.sticky-top > div.menu-container > ul > li > div.submenu > div > h2 {
+            font-size: 12px;
+            padding: 7px 11px;
+            color: #6e6e73;
+            font-weight: 400; }
+          div.sticky-top > div.menu-container > ul > li > div.submenu > div > a {
+            text-decoration: none;
+            color: #333336; }
+
+div.heading-container {
+  width: 100%;
+  min-height: 580px;
+  height: 692px;
+  font-family: "SF Pro Display";
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0.5rem; }
+  div.heading-container > div.heading-txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    color: #f5f5f7; }
+    div.heading-container > div.heading-txt > h2 {
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 1.07;
+      letter-spacing: -0.005em; }
+    div.heading-container > div.heading-txt > h3 {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.1;
+      margin-top: 6px;
+      letter-spacing: 0.004em; }
+    div.heading-container > div.heading-txt > div.heading-link {
+      display: flex;
+      column-gap: 3rem;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.38;
+      letter-spacing: 0.011em;
+      margin-top: 0.65em;
+      position: relative;
+      z-index: 10; }
+      div.heading-container > div.heading-txt > div.heading-link > a {
+        text-decoration: none;
+        color: #2997ff;
+        display: flex;
+        align-items: center; }
+        div.heading-container > div.heading-txt > div.heading-link > a:hover > p {
+          text-decoration: underline; }
+        div.heading-container > div.heading-txt > div.heading-link > a > span::after {
+          font-family: "SF Pro Icons";
+          font-size: 21px;
+          font-weight: 400;
+          color: #2997ff;
+          content: ""; }
+  div.heading-container > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+
+div.heading-img1 {
+  background-image: url(../media/hero_iphone15pro_startframe__eqik3fj8bx4y_large.jpg); }
+
+div.heading-img2 {
+  background-image: url(../media/hero_iphone15_announce__uuemlcwczn6u_large.jpg); }
+  div.heading-img2 h2 {
+    color: #1d1d1f; }
+  div.heading-img2 h3 {
+    color: #1d1d1f; }
+
+div.heading-img3 {
+  background-image: url(../media/hero_apple_watch_series_9_order__d0fi9mb84dci_large.jpg); }
+  div.heading-img3 h2 {
+    background: url(../media/hero_logo_apple_watch_series_9__eg5xcrxghuaa_large.png) center no-repeat;
+    background-size: contain;
+    height: 72px;
+    width: 100%; }
+
+div.body-container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem; }
+  div.body-container > div.body-image {
+    position: relative;
+    width: calc(50% - 0.25rem);
+    height: 580px;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat; }
+    div.body-container > div.body-image > div.body-txt {
+      display: flex;
+      flex-direction: column;
+      margin: 3rem 0;
+      align-items: center;
+      font-family: "SF Pro Display"; }
+      div.body-container > div.body-image > div.body-txt > h4 {
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0;
+        font-size: 40px; }
+      div.body-container > div.body-image > div.body-txt > h4.body-txt-img {
+        width: 100%;
+        height: 41px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center; }
+      div.body-container > div.body-image > div.body-txt > h5 {
+        font-size: 21px;
+        line-height: 1.23;
+        letter-spacing: 0.016em;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        text-align: center; }
+        div.body-container > div.body-image > div.body-txt > h5 > span {
+          background: url(../media/promo_m2_chip__enw2kz91lsuq_large.png) center no-repeat;
+          background-size: contain;
+          width: 37px;
+          height: 37px;
+          float: right; }
+        div.body-container > div.body-image > div.body-txt > h5 a {
+          font-size: 0.6em;
+          text-decoration: none;
+          color: #1d1d1f;
+          z-index: 10; }
+      div.body-container > div.body-image > div.body-txt > h5.break-line {
+        max-width: 60%; }
+      div.body-container > div.body-image > div.body-txt > p {
+        font-size: 17px;
+        line-height: 1.23;
+        font-weight: 400;
+        margin-top: 12px;
+        letter-spacing: -0.022em; }
+      div.body-container > div.body-image > div.body-txt > div.body-link {
+        display: flex;
+        column-gap: 2rem;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.23;
+        letter-spacing: -0.022em;
+        margin-top: 0.65em;
+        position: relative;
+        z-index: 10; }
+        div.body-container > div.body-image > div.body-txt > div.body-link > a {
+          text-decoration: none;
+          color: #2997ff;
+          display: flex;
+          align-items: center; }
+          div.body-container > div.body-image > div.body-txt > div.body-link > a:hover > p {
+            text-decoration: underline; }
+          div.body-container > div.body-image > div.body-txt > div.body-link > a > span::after {
+            font-family: "SF Pro Icons";
+            font-size: 17px;
+            font-weight: 400;
+            color: #2997ff;
+            content: ""; }
+    div.body-container > div.body-image > div.body-txt-dark {
+      color: #1d1d1f; }
+    div.body-container > div.body-image > div.body-txt-light {
+      color: #f5f5f7; }
+    div.body-container > div.body-image > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+  div.body-container h4.bti1 {
+    background-image: url(../media/promo_logo_apple_vision_pro__90zi46p7dc2y_large.png); }
+  div.body-container h4.bti2 {
+    background-image: url(../media/logo_tradein__d1fpktgipvki_large.png); }
+  div.body-container h4.bti3 {
+    background-image: url(../media/logo__dcojfwkzna2q_large.png); }
+  div.body-container > div.body-bottom {
+    align-items: flex-end; }
+  div.body-container > div.body-image1 {
+    background-image: url(../media/promo_ipadpro_refresh__evi9utuixwuq_large.jpg); }
+  div.body-container > div.body-image2 {
+    background-image: url(../media/promo_apple_vision_pro__f4v4zp0sum2y_large.jpg); }
+  div.body-container > div.body-image3 {
+    background-image: url(../media/promo_macbook_air_15_midnight__3zojl1nanrme_large.jpg); }
+  div.body-container > div.body-image4 {
+    background-image: url(../media/promo_airpods_pro_order__d8xv36p4uwae_large.jpg); }
+  div.body-container > div.body-image5 {
+    background-image: url(../media/promo_iphone_tradein__bugw15ka691e_large.jpg); }
+  div.body-container > div.body-image6 {
+    background-image: url(../media/tile__cauwwcyyn9hy_large.jpg); }
+
+div.footer {
+  width: 100%;
+  color: #6e6e73;
+  background-color: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem calc(17.5% + 12px); }
+  div.footer > div.f-txt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    row-gap: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid #d2d2d7;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.01;
+    font-weight: 400; }
+    div.footer > div.f-txt a {
+      color: #6e6e73;
+      text-decoration: underline; }
+  div.footer > div.f-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    row-gap: 2rem;
+    border-bottom: 1px solid #d2d2d7;
+    font-weight: 400;
+    font-size: 12px; }
+    div.footer > div.f-menu > div.f-column {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem; }
+      div.footer > div.f-menu > div.f-column > div.f-btn {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem; }
+        div.footer > div.f-menu > div.f-column > div.f-btn > p {
+          color: #6e6e73;
+          font-weight: 600; }
+        div.footer > div.f-menu > div.f-column > div.f-btn > a {
+          display: flex;
+          width: max-content;
+          text-decoration: none;
+          color: #424245; }
+          div.footer > div.f-menu > div.f-column > div.f-btn > a:hover {
+            text-decoration: underline; }
+    div.footer > div.f-menu > p > a {
+      text-decoration: underline;
+      color: #0066cc; }
+  div.footer div.f-copyright {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    padding-bottom: 3rem; }
+    div.footer div.f-copyright > p {
+      color: #6e6e73;
+      font-size: 12px;
+      margin-right: 2rem; }
+    div.footer div.f-copyright > ul {
+      flex-grow: 1;
+      display: flex;
+      list-style: none; }
+      div.footer div.f-copyright > ul > li {
+        padding-right: 0.6rem;
+        margin-right: 0.6rem;
+        border-right: 1px solid #424245;
+        font-size: 12px; }
+        div.footer div.f-copyright > ul > li:nth-last-child(1) {
+          padding: 0;
+          margin: 0;
+          border: none; }
+        div.footer div.f-copyright > ul > li > a {
+          text-decoration: none;
+          color: #424245; }
+          div.footer div.f-copyright > ul > li > a:hover {
+            text-decoration: underline; }
+    div.footer div.f-copyright > a {
+      font-size: 12px;
+      color: #424245;
+      text-decoration: none; }
+      div.footer div.f-copyright > a:hover {
+        text-decoration: underline; }
+
+/*# sourceMappingURL=main.css.map */
