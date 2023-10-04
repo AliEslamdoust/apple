@@ -222,6 +222,7 @@ $font-bold: 700;
       }
     }
   }
+
   // commercial images
   div.heading-container {
     width: 100%;
@@ -238,6 +239,10 @@ $font-bold: 700;
         font-size: 48px;
         line-height: 1.08;
         letter-spacing: -0.002em;
+        max-height: 62px;
+      }
+      > h2.heading-h2img ~ h3 {
+        margin-top: 12px !important;
       }
       > h3 {
         font-size: 24px;
@@ -292,6 +297,7 @@ $font-bold: 700;
       }
     }
   }
+
   // footer
   div.footer-container {
     width: 100%;
@@ -363,7 +369,7 @@ $font-bold: 700;
                   height: auto;
                   padding: 1.25rem 1rem;
                 }
-                ~ label > div{
+                ~ label > div {
                   transform: rotate(45deg);
                 }
               }
@@ -394,28 +400,47 @@ $font-bold: 700;
   // commercial images
   div.heading-container {
     height: 500px;
+    > div.heading-txt {
+      > h2 {
+        font-size: 32px;
+        line-height: 1.12;
+        letter-spacing: 0.004em;
+        max-height: 42px;
+      }
+      > h3 {
+        font-size: 19px;
+        line-height: 1.21;
+        margin-top: 4px;
+        letter-spacing: 0;
+      }
+      > div.heading-link {
+        font-size: 17px;
+        line-height: 1.23;
+        letter-spacing: -0.022em;
+      }
+    }
   }
-  // body
+  div.heading-img1 {
+    background-image: url(../media/hero_iphone15pro__i70z9oz3hj2i_small.jpg);
+  }
+
+  // body images
   div.body-container {
     padding: 0;
     > div.body-image {
       height: 500px;
       width: 100%;
+      > div.body-txt {
+        > p {
+          font-size: 17px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 320px) {
-  // commercial images
-  div.heading-container {
-    height: 500px;
-  }
-  // body
-  div.body-container {
-    padding: 0;
-    > div.body-image {
-      height: 500px;
-      width: 100%;
-    }
+  body > *{
+    min-width: 320px;
   }
 }

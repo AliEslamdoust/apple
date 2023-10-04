@@ -174,7 +174,10 @@
     div.heading-container > div.heading-txt > h2 {
       font-size: 48px;
       line-height: 1.08;
-      letter-spacing: -0.002em; }
+      letter-spacing: -0.002em;
+      max-height: 62px; }
+    div.heading-container > div.heading-txt > h2.heading-h2img ~ h3 {
+      margin-top: 12px !important; }
     div.heading-container > div.heading-txt > h3 {
       font-size: 24px;
       line-height: 1.16;
@@ -338,20 +341,33 @@
 @media (max-width: 734px) {
   div.heading-container {
     height: 500px; }
+    div.heading-container > div.heading-txt > h2 {
+      font-size: 32px;
+      line-height: 1.12;
+      letter-spacing: 0.004em;
+      max-height: 42px; }
+    div.heading-container > div.heading-txt > h3 {
+      font-size: 19px;
+      line-height: 1.21;
+      margin-top: 4px;
+      letter-spacing: 0; }
+    div.heading-container > div.heading-txt > div.heading-link {
+      font-size: 17px;
+      line-height: 1.23;
+      letter-spacing: -0.022em; }
+
+  div.heading-img1 {
+    background-image: url(../media/hero_iphone15pro__i70z9oz3hj2i_small.jpg); }
 
   div.body-container {
     padding: 0; }
     div.body-container > div.body-image {
       height: 500px;
-      width: 100%; } }
+      width: 100%; }
+      div.body-container > div.body-image > div.body-txt > p {
+        font-size: 17px; } }
 @media (max-width: 320px) {
-  div.heading-container {
-    height: 500px; }
-
-  div.body-container {
-    padding: 0; }
-    div.body-container > div.body-image {
-      height: 500px;
-      width: 100%; } }
+  body > * {
+    min-width: 320px; } }
 
 /*# sourceMappingURL=responsive.css.map */

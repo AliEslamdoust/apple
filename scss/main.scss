@@ -291,6 +291,7 @@ div.heading-container {
     padding-top: 3rem;
     color: $heading-color;
     > h2 {
+      text-align: center;
       font-size: 56px;
       font-weight: $font-semibold;
       line-height: 1.07;
@@ -302,6 +303,7 @@ div.heading-container {
       line-height: 1.1;
       margin-top: 6px;
       letter-spacing: 0.004em;
+      text-align: center;
     }
     > div.heading-link {
       @include link(1.38, 21px, 3rem, 0.011em);
@@ -370,6 +372,7 @@ div.body-container {
         font-weight: $font-semibold;
         letter-spacing: 0;
         font-size: 40px;
+        text-align: center;
       }
       > h4.body-txt-img {
         width: 100%;
@@ -406,6 +409,7 @@ div.body-container {
         max-width: 60%;
       }
       > p {
+        text-align: center;
         font-size: 17px;
         line-height: 1.23;
         font-weight: $font-regular;
@@ -477,6 +481,7 @@ div.footer-container {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1rem 0;
+    line-height: 1.4;
     > div.f-txt {
       display: flex;
       flex-direction: column;
@@ -504,6 +509,7 @@ div.footer-container {
       border-bottom: 1px solid $footer-border-color;
       font-weight: $font-regular;
       font-size: 12px;
+      line-height: inherit;
       > div.f-column {
         width: 20%;
         display: flex;
@@ -522,21 +528,25 @@ div.footer-container {
             display: flex;
             flex-direction: column;
             row-gap: 0.5rem;
-            width: 100%;> a {
-            display: flex;
-            width: max-content;
-            text-decoration: none;
-            color: $footer-color;
-            &:hover {
-              text-decoration: underline;
+            width: 100%;
+            > a {
+              display: flex;
+              width: max-content;
+              text-decoration: none;
+              color: $footer-color;
+              &:hover {
+                text-decoration: underline;
+              }
             }
-          }
           }
         }
       }
-      > p > a {
-        text-decoration: underline;
-        color: $link-color;
+      > p {
+        line-height: inherit;
+        > a {
+          text-decoration: underline;
+          color: $link-color;
+        }
       }
     }
     div.f-copyright {
@@ -544,23 +554,28 @@ div.footer-container {
       margin-top: 0.5rem;
       align-items: center;
       padding-bottom: 3rem;
+      line-height: inherit;
       > div {
         display: flex;
         align-items: center;
-          flex-grow: 1;
+        flex-grow: 1;
+        line-height: inherit;
         > p {
           color: $submenu-text;
           font-size: 12px;
           margin-right: 2rem;
+          line-height: inherit;
         }
         > ul {
           display: flex;
+          flex-wrap: wrap;
           list-style: none;
           > li {
             padding-right: 0.6rem;
             margin-right: 0.6rem;
             border-right: 1px solid $footer-color;
             font-size: 12px;
+            line-height: inherit;
             &:nth-last-child(1) {
               padding: 0;
               margin: 0;
@@ -580,6 +595,7 @@ div.footer-container {
         font-size: 12px;
         color: $footer-color;
         text-decoration: none;
+        line-height: inherit;
         &:hover {
           text-decoration: underline;
         }
