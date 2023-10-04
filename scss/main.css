@@ -44,10 +44,8 @@
 
 input[type="checkbox"] {
   display: none; }
-  input[type="checkbox"]:checked ~ div.education-ad {
+  input[type="checkbox"]#education:checked ~ div.edu-container {
     height: 0; }
-  input[type="checkbox"]:checked ~ div.menu-container div.submenu {
-    top: 44px; }
 
 div.sticky-top {
   top: 0;
@@ -56,55 +54,74 @@ div.sticky-top {
   height: max-content;
   position: sticky;
   z-index: 999; }
-  div.sticky-top > div.education-ad {
+  div.sticky-top > div.edu-container {
+    background-color: #fbfbfd;
     width: 100%;
+    padding: 0 12px;
     height: 40px;
     display: flex;
-    padding: 0 17.5%;
-    align-items: center;
-    background-color: #fbfbfd;
-    transform-origin: top;
-    overflow: hidden; }
-    div.sticky-top > div.education-ad > a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.8);
-      font-size: 12px;
-      padding: 0 12px; }
-      div.sticky-top > div.education-ad > a:hover {
-        text-decoration: underline; }
-    div.sticky-top > div.education-ad > span {
-      width: 1px;
-      height: 12px;
-      background-color: rgba(0, 0, 0, 0.478); }
-    div.sticky-top > div.education-ad > label {
-      color: rgba(0, 0, 0, 0.8);
-      cursor: pointer;
-      font-size: 12px;
-      padding: 0 12px; }
-      div.sticky-top > div.education-ad > label:hover {
-        text-decoration: underline; }
+    justify-content: center; }
+    div.sticky-top > div.edu-container > div.education-ad {
+      width: 100%;
+      max-width: 1000px;
+      height: 100%;
+      display: flex;
+      padding: 0;
+      align-items: center;
+      transform-origin: top;
+      overflow: hidden; }
+      div.sticky-top > div.edu-container > div.education-ad > a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 12px;
+        padding-right: 12px; }
+        div.sticky-top > div.edu-container > div.education-ad > a:hover {
+          text-decoration: underline; }
+      div.sticky-top > div.edu-container > div.education-ad > span {
+        width: 1px;
+        height: 12px;
+        background-color: rgba(0, 0, 0, 0.478); }
+      div.sticky-top > div.edu-container > div.education-ad > label {
+        color: rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+        font-size: 12px;
+        padding-left: 12px; }
+        div.sticky-top > div.edu-container > div.education-ad > label:hover {
+          text-decoration: underline; }
   div.sticky-top > div.menu-container {
     width: 100%;
+    max-width: 100%;
     height: 44px;
+    padding: 0 12px;
     display: flex;
     align-items: center;
-    padding: 0 17.5%;
+    justify-content: center;
     background-color: rgba(251, 251, 253, 0.8);
     backdrop-filter: blur(20px);
     position: relative; }
     div.sticky-top > div.menu-container > ul {
       width: 100%;
-      padding: 0 12px;
+      max-width: 1000px;
       display: flex;
-      list-style: none; }
+      list-style: none;
+      justify-content: space-between;
+      padding: 0; }
       div.sticky-top > div.menu-container > ul > li {
         flex-grow: 1; }
         div.sticky-top > div.menu-container > ul > li:hover > div.submenu {
           height: auto;
           padding: 1rem 17.5% 3rem 17.5%; }
+        div.sticky-top > div.menu-container > ul > li:nth-last-of-type(2) {
+          flex-grow: 0; }
+        div.sticky-top > div.menu-container > ul > li:nth-last-of-type(1) {
+          display: none; }
         div.sticky-top > div.menu-container > ul > li > a {
-          display: block;
-          width: 100%; }
+          display: flex;
+          align-items: center;
+          text-decoration: none; }
+          div.sticky-top > div.menu-container > ul > li > a > img {
+            height: 100%;
+            object-fit: contain; }
         div.sticky-top > div.menu-container > ul > li > div.submenu {
           flex-wrap: wrap;
           display: flex;
@@ -281,10 +298,11 @@ div.body-container {
           height: 37px;
           float: right; }
         div.body-container > div.body-image > div.body-txt > h5 a {
-          font-size: 0.6em;
+          font-size: 0.7em;
           text-decoration: none;
           color: #1d1d1f;
-          z-index: 10; }
+          position: relative;
+          z-index: 11; }
       div.body-container > div.body-image > div.body-txt > h5.break-line {
         max-width: 60%; }
       div.body-container > div.body-image > div.body-txt > p {
@@ -347,93 +365,105 @@ div.body-container {
   div.body-container > div.body-image6 {
     background-image: url(../media/tile__cauwwcyyn9hy_large.jpg); }
 
-div.footer {
+div.footer-container {
   width: 100%;
-  color: #6e6e73;
-  background-color: #f5f5f7;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 1rem calc(17.5% + 12px); }
-  div.footer > div.f-txt {
+  justify-content: center;
+  background-color: #f5f5f7;
+  padding: 0 12px; }
+  div.footer-container div.footer {
+    width: 100%;
+    max-width: 1000px;
+    color: #6e6e73;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 2rem;
-    row-gap: 0.5rem;
-    width: 100%;
-    border-bottom: 1px solid #d2d2d7;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: -0.01;
-    font-weight: 400; }
-    div.footer > div.f-txt a {
-      color: #6e6e73;
-      text-decoration: underline; }
-  div.footer > div.f-menu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem 0;
-    row-gap: 2rem;
-    border-bottom: 1px solid #d2d2d7;
-    font-weight: 400;
-    font-size: 12px; }
-    div.footer > div.f-menu > div.f-column {
-      width: 20%;
+    padding: 1rem 0; }
+    div.footer-container div.footer > div.f-txt {
       display: flex;
       flex-direction: column;
-      row-gap: 2rem; }
-      div.footer > div.f-menu > div.f-column > div.f-btn {
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      row-gap: 0.5rem;
+      width: 100%;
+      border-bottom: 1px solid #d2d2d7;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: -0.01;
+      font-weight: 400; }
+      div.footer-container div.footer > div.f-txt a {
+        color: #6e6e73;
+        text-decoration: underline; }
+    div.footer-container div.footer > div.f-menu {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1rem 0;
+      row-gap: 2rem;
+      border-bottom: 1px solid #d2d2d7;
+      font-weight: 400;
+      font-size: 12px; }
+      div.footer-container div.footer > div.f-menu > div.f-column {
+        width: 20%;
         display: flex;
         flex-direction: column;
-        row-gap: 0.5rem; }
-        div.footer > div.f-menu > div.f-column > div.f-btn > p {
-          color: #6e6e73;
-          font-weight: 600; }
-        div.footer > div.f-menu > div.f-column > div.f-btn > a {
+        row-gap: 2rem; }
+        div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn {
           display: flex;
-          width: max-content;
-          text-decoration: none;
-          color: #424245; }
-          div.footer > div.f-menu > div.f-column > div.f-btn > a:hover {
-            text-decoration: underline; }
-    div.footer > div.f-menu > p > a {
-      text-decoration: underline;
-      color: #0066cc; }
-  div.footer div.f-copyright {
-    display: flex;
-    margin-top: 0.5rem;
-    align-items: center;
-    padding-bottom: 3rem; }
-    div.footer div.f-copyright > p {
-      color: #6e6e73;
-      font-size: 12px;
-      margin-right: 2rem; }
-    div.footer div.f-copyright > ul {
-      flex-grow: 1;
+          flex-direction: column;
+          row-gap: 0.5rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > label {
+            color: #6e6e73;
+            font-weight: 600;
+            cursor: text; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+            width: 100%; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a {
+            display: flex;
+            width: max-content;
+            text-decoration: none;
+            color: #424245; }
+            div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a:hover {
+              text-decoration: underline; }
+      div.footer-container div.footer > div.f-menu > p > a {
+        text-decoration: underline;
+        color: #0066cc; }
+    div.footer-container div.footer div.f-copyright {
       display: flex;
-      list-style: none; }
-      div.footer div.f-copyright > ul > li {
-        padding-right: 0.6rem;
-        margin-right: 0.6rem;
-        border-right: 1px solid #424245;
-        font-size: 12px; }
-        div.footer div.f-copyright > ul > li:nth-last-child(1) {
-          padding: 0;
-          margin: 0;
-          border: none; }
-        div.footer div.f-copyright > ul > li > a {
-          text-decoration: none;
-          color: #424245; }
-          div.footer div.f-copyright > ul > li > a:hover {
-            text-decoration: underline; }
-    div.footer div.f-copyright > a {
-      font-size: 12px;
-      color: #424245;
-      text-decoration: none; }
-      div.footer div.f-copyright > a:hover {
-        text-decoration: underline; }
+      margin-top: 0.5rem;
+      align-items: center;
+      padding-bottom: 3rem; }
+      div.footer-container div.footer div.f-copyright > p {
+        color: #6e6e73;
+        font-size: 12px;
+        margin-right: 2rem; }
+      div.footer-container div.footer div.f-copyright > ul {
+        flex-grow: 1;
+        display: flex;
+        list-style: none; }
+        div.footer-container div.footer div.f-copyright > ul > li {
+          padding-right: 0.6rem;
+          margin-right: 0.6rem;
+          border-right: 1px solid #424245;
+          font-size: 12px; }
+          div.footer-container div.footer div.f-copyright > ul > li:nth-last-child(1) {
+            padding: 0;
+            margin: 0;
+            border: none; }
+          div.footer-container div.footer div.f-copyright > ul > li > a {
+            text-decoration: none;
+            color: #424245; }
+            div.footer-container div.footer div.f-copyright > ul > li > a:hover {
+              text-decoration: underline; }
+      div.footer-container div.footer div.f-copyright > a {
+        font-size: 12px;
+        color: #424245;
+        text-decoration: none; }
+        div.footer-container div.footer div.f-copyright > a:hover {
+          text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */
