@@ -60,7 +60,8 @@ div.sticky-top {
     padding: 0 12px;
     height: 40px;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
     div.sticky-top > div.edu-container > div.education-ad {
       width: 100%;
       max-width: 1000px;
