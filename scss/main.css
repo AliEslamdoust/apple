@@ -423,13 +423,13 @@ div.footer-container {
             flex-direction: column;
             row-gap: 0.5rem;
             width: 100%; }
-          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a {
-            display: flex;
-            width: max-content;
-            text-decoration: none;
-            color: #424245; }
-            div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a:hover {
-              text-decoration: underline; }
+            div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a {
+              display: flex;
+              width: max-content;
+              text-decoration: none;
+              color: #424245; }
+              div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a:hover {
+                text-decoration: underline; }
       div.footer-container div.footer > div.f-menu > p > a {
         text-decoration: underline;
         color: #0066cc; }
@@ -438,28 +438,31 @@ div.footer-container {
       margin-top: 0.5rem;
       align-items: center;
       padding-bottom: 3rem; }
-      div.footer-container div.footer div.f-copyright > p {
-        color: #6e6e73;
-        font-size: 12px;
-        margin-right: 2rem; }
-      div.footer-container div.footer div.f-copyright > ul {
-        flex-grow: 1;
+      div.footer-container div.footer div.f-copyright > div {
         display: flex;
-        list-style: none; }
-        div.footer-container div.footer div.f-copyright > ul > li {
-          padding-right: 0.6rem;
-          margin-right: 0.6rem;
-          border-right: 1px solid #424245;
-          font-size: 12px; }
-          div.footer-container div.footer div.f-copyright > ul > li:nth-last-child(1) {
-            padding: 0;
-            margin: 0;
-            border: none; }
-          div.footer-container div.footer div.f-copyright > ul > li > a {
-            text-decoration: none;
-            color: #424245; }
-            div.footer-container div.footer div.f-copyright > ul > li > a:hover {
-              text-decoration: underline; }
+        align-items: center;
+        flex-grow: 1; }
+        div.footer-container div.footer div.f-copyright > div > p {
+          color: #6e6e73;
+          font-size: 12px;
+          margin-right: 2rem; }
+        div.footer-container div.footer div.f-copyright > div > ul {
+          display: flex;
+          list-style: none; }
+          div.footer-container div.footer div.f-copyright > div > ul > li {
+            padding-right: 0.6rem;
+            margin-right: 0.6rem;
+            border-right: 1px solid #424245;
+            font-size: 12px; }
+            div.footer-container div.footer div.f-copyright > div > ul > li:nth-last-child(1) {
+              padding: 0;
+              margin: 0;
+              border: none; }
+            div.footer-container div.footer div.f-copyright > div > ul > li > a {
+              text-decoration: none;
+              color: #424245; }
+              div.footer-container div.footer div.f-copyright > div > ul > li > a:hover {
+                text-decoration: underline; }
       div.footer-container div.footer div.f-copyright > a {
         font-size: 12px;
         color: #424245;

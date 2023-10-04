@@ -159,7 +159,182 @@
             line-height: 1.14;
             font-weight: 600;
             letter-spacing: 0.007em;
-            font-family: "SF Pro Display"; } }
+            font-family: "SF Pro Display"; }
+
+  div.heading-container {
+    width: 100%;
+    min-height: 580px;
+    height: 692px;
+    font-family: "SF Pro Display";
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0.5rem; }
+    div.heading-container > div.heading-txt > h2 {
+      font-size: 48px;
+      line-height: 1.08;
+      letter-spacing: -0.002em; }
+    div.heading-container > div.heading-txt > h3 {
+      font-size: 24px;
+      line-height: 1.16;
+      margin-top: 5px;
+      letter-spacing: 0.009em; }
+    div.heading-container > div.heading-txt > div.heading-link {
+      font-size: 19px;
+      line-height: 1.21;
+      letter-spacing: 0.012em; }
+
+  div.body-container > div.body-image > div.body-txt > h4 {
+    font-size: 32px;
+    line-height: 1.12;
+    letter-spacing: 0.002em; }
+  div.body-container > div.body-image > div.body-txt > h4.body-txt-img {
+    height: 27px; }
+    div.body-container > div.body-image > div.body-txt > h4.body-txt-img ~ h5 {
+      margin-top: 9px; }
+  div.body-container > div.body-image > div.body-txt > h5 {
+    font-size: 19px;
+    line-height: 1.21;
+    margin-top: -2px;
+    letter-spacing: 0.012em; }
+  div.body-container > div.body-image > div.body-txt > p {
+    letter-spacing: 0;
+    font-size: 19px;
+    line-height: 1.21;
+    color: #6e6e73; }
+  div.body-container > div.body-image > div.body-txt > div.body-link {
+    margin-top: 0.8em;
+    font-size: 17px;
+    line-height: 1.23;
+    letter-spacing: -0.022em; }
+    div.body-container > div.body-image > div.body-txt > div.body-link > a {
+      color: #0066cc; }
+
+  div.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f7;
+    padding: 0 12px; }
+    div.footer-container div.footer > div.f-menu {
+      flex-direction: column;
+      padding: 2rem 0 1rem 0;
+      row-gap: 0;
+      border-bottom: unset; }
+      div.footer-container div.footer > div.f-menu > div.f-column {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 0; }
+        div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 0;
+          border-bottom: 1px solid #d2d2d7;
+          padding: 0.6rem 0; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > label {
+            color: #6e6e73;
+            font-weight: 600;
+            cursor: text;
+            position: relative; }
+            div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > label > div {
+              width: 8px;
+              height: 8px;
+              position: absolute;
+              padding: 0;
+              right: 4px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              top: calc(50% - 4px); }
+              div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > label > div::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+                transform-origin: center;
+                transform: rotate(90deg); }
+              div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > label > div::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+                transform-origin: center; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div {
+            row-gap: 0.5rem;
+            height: 0;
+            overflow: hidden;
+            padding: 0 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu1:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu1:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu2:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu2:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu3:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu3:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu4:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu4:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu5:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu5:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu6:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu6:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu7:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu7:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu8:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu8:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu9:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu9:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu10:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu10:checked ~ label > div {
+            transform: rotate(45deg); }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu11:checked ~ div {
+            height: auto;
+            padding: 1.25rem 1rem; }
+          div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn input#f-mnu11:checked ~ label > div {
+            transform: rotate(45deg); }
+      div.footer-container div.footer > div.f-menu > p {
+        margin-top: 1rem; }
+    div.footer-container div.footer div.f-copyright {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: flex-start;
+      padding-bottom: 1rem;
+      row-gap: 0.5rem; }
+      div.footer-container div.footer div.f-copyright > div {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 0.25rem; } }
 @media (max-width: 734px) {
   div.heading-container {
     height: 500px; }
