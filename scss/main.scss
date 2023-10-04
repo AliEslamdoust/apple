@@ -79,6 +79,7 @@ $font-bold: 700;
 
 @mixin link($lineheight, $link-font-size, $column-gap, $letterspacing) {
   display: flex;
+  -moz-column-gap: $column-gap;
   column-gap: $column-gap;
   font-size: $link-font-size;
   font-weight: $font-regular;
@@ -122,7 +123,10 @@ div.sticky-top {
   top: 0;
   left: 0;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
+  position: -webkit-sticky;
   position: sticky;
   z-index: 999;
   > div.edu-container {
@@ -176,6 +180,7 @@ div.sticky-top {
     align-items: center;
     justify-content: center;
     background-color: $menu-bg;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     position: relative;
     > ul {
@@ -203,6 +208,7 @@ div.sticky-top {
           text-decoration: none;
           > img {
             height: 100%;
+            -o-object-fit: contain;
             object-fit: contain;
           }
         }
@@ -214,11 +220,14 @@ div.sticky-top {
           width: 100%;
           overflow: hidden;
           top: 100%;
+          -moz-column-gap: 3rem;
           column-gap: 3rem;
           height: 0;
           padding: 0 17.5%;
           background-color: $header-bg-1;
           > div.s-title {
+            width: -webkit-max-content;
+            width: -moz-max-content;
             width: max-content;
             display: flex;
             flex-direction: column;
@@ -232,6 +241,8 @@ div.sticky-top {
             > div.s-more {
               display: flex;
               flex-direction: column;
+              width: -webkit-max-content;
+              width: -moz-max-content;
               width: max-content;
               > a {
                 font-size: 12px;
@@ -531,6 +542,8 @@ div.footer-container {
             width: 100%;
             > a {
               display: flex;
+              width: -webkit-max-content;
+              width: -moz-max-content;
               width: max-content;
               text-decoration: none;
               color: $footer-color;

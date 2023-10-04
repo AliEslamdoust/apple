@@ -51,7 +51,10 @@ div.sticky-top {
   top: 0;
   left: 0;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
+  position: -webkit-sticky;
   position: sticky;
   z-index: 999; }
   div.sticky-top > div.edu-container {
@@ -98,6 +101,7 @@ div.sticky-top {
     align-items: center;
     justify-content: center;
     background-color: rgba(251, 251, 253, 0.8);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     position: relative; }
     div.sticky-top > div.menu-container > ul {
@@ -122,6 +126,7 @@ div.sticky-top {
           text-decoration: none; }
           div.sticky-top > div.menu-container > ul > li > a > img {
             height: 100%;
+            -o-object-fit: contain;
             object-fit: contain; }
         div.sticky-top > div.menu-container > ul > li > div.submenu {
           flex-wrap: wrap;
@@ -131,11 +136,14 @@ div.sticky-top {
           width: 100%;
           overflow: hidden;
           top: 100%;
+          -moz-column-gap: 3rem;
           column-gap: 3rem;
           height: 0;
           padding: 0 17.5%;
           background-color: #fbfbfd; }
           div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title {
+            width: -webkit-max-content;
+            width: -moz-max-content;
             width: max-content;
             display: flex;
             flex-direction: column;
@@ -148,6 +156,8 @@ div.sticky-top {
             div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title > div.s-more {
               display: flex;
               flex-direction: column;
+              width: -webkit-max-content;
+              width: -moz-max-content;
               width: max-content; }
               div.sticky-top > div.menu-container > ul > li > div.submenu > div.s-title > div.s-more > a {
                 font-size: 12px;
@@ -205,6 +215,7 @@ div.heading-container {
       text-align: center; }
     div.heading-container > div.heading-txt > div.heading-link {
       display: flex;
+      -moz-column-gap: 3rem;
       column-gap: 3rem;
       font-size: 21px;
       font-weight: 400;
@@ -318,6 +329,7 @@ div.body-container {
         letter-spacing: -0.022em; }
       div.body-container > div.body-image > div.body-txt > div.body-link {
         display: flex;
+        -moz-column-gap: 2rem;
         column-gap: 2rem;
         font-size: 17px;
         font-weight: 400;
@@ -431,6 +443,8 @@ div.footer-container {
             width: 100%; }
             div.footer-container div.footer > div.f-menu > div.f-column > div.f-btn > div > a {
               display: flex;
+              width: -webkit-max-content;
+              width: -moz-max-content;
               width: max-content;
               text-decoration: none;
               color: #424245; }

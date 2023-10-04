@@ -86,8 +86,23 @@ $font-bold: 700;
       display: none;
     }
     ~ div.sticky-top > div.menu-container {
+      -webkit-backdrop-filter: unset;
       backdrop-filter: unset;
       background-color: $header-bg-1;
+      @-webkit-keyframes hideAnimation {
+        0% {
+          opacity: 1;
+          height: 100%;
+        }
+        99% {
+          opacity: 0;
+          height: 100%;
+        }
+        100% {
+          opacity: 0;
+          height: 0;
+        }
+      }
       @keyframes hideAnimation {
         0% {
           opacity: 1;
@@ -106,6 +121,7 @@ $font-bold: 700;
       li:nth-last-child(2),
       li:nth-last-child(3) {
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        -webkit-animation: hideAnimation 0.5s;
         animation: hideAnimation 0.5s;
         opacity: 0;
         height: 0;
@@ -131,6 +147,16 @@ $font-bold: 700;
         div.ham-menu {
           height: 100vh;
           overflow: auto;
+          @-webkit-keyframes ttb {
+            0% {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
           @keyframes ttb {
             0% {
               transform: translateY(-100%);
@@ -144,6 +170,7 @@ $font-bold: 700;
           $x: 1;
           @while $x <=11 {
             a.ham-mbtn:nth-child(#{$x}) {
+              -webkit-animation: ttb 0.75s;
               animation: ttb 0.75s;
             }
             $x: $x + 1;
@@ -440,7 +467,7 @@ $font-bold: 700;
 }
 
 @media (max-width: 320px) {
-  body > *{
+  body > * {
     min-width: 320px;
   }
 }

@@ -43,8 +43,19 @@
   input#hamburger:checked ~ div.footer-container {
     display: none; }
   input#hamburger:checked ~ div.sticky-top > div.menu-container {
+    -webkit-backdrop-filter: unset;
     backdrop-filter: unset;
     background-color: #fbfbfd; }
+  @-webkit-keyframes hideAnimation {
+    0% {
+      opacity: 1;
+      height: 100%; }
+    99% {
+      opacity: 0;
+      height: 100%; }
+    100% {
+      opacity: 0;
+      height: 0; } }
   @keyframes hideAnimation {
     0% {
       opacity: 1;
@@ -59,6 +70,7 @@
     input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(2),
     input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(3) {
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      -webkit-animation: hideAnimation 0.5s;
       animation: hideAnimation 0.5s;
       opacity: 0;
       height: 0;
@@ -77,6 +89,13 @@
       input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu {
         height: 100vh;
         overflow: auto; }
+  @-webkit-keyframes ttb {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0; }
+    100% {
+      transform: translateY(0);
+      opacity: 1; } }
   @keyframes ttb {
     0% {
       transform: translateY(-100%);
@@ -85,26 +104,37 @@
       transform: translateY(0);
       opacity: 1; } }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(1) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(2) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(3) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(4) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(5) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(6) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(7) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(8) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(9) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(10) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
         input#hamburger:checked ~ div.sticky-top > div.menu-container li:nth-last-child(1) div.ham-menu a.ham-mbtn:nth-child(11) {
+          -webkit-animation: ttb 0.75s;
           animation: ttb 0.75s; }
 
   div.sticky-top > div.edu-container {
